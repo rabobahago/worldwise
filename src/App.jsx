@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Product from "./components/Product";
-import Pricing from "./components/Pricing";
-import HomePage from "./components/HomePage";
-import PageNotFound from "./components/PageNotFound";
+import Product from "./pages/Product";
+import Pricing from "./pages/Pricing";
+import HomePage from "./pages/HomePage";
+import PageNotFound from "./pages/PageNotFound";
 
 function App() {
   return (
