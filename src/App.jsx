@@ -12,12 +12,17 @@ function App() {
       <h3>Hello world!</h3>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route index element={<HomePage />} />
           <Route path="product" element={<Product />} />
           <Route path="pricing" element={<Pricing />} />
           <Route path="login" element={<Login />} />
+          <Route path="app" element={<AppLayout />}>
+            <Route index element={<p>List of Cities</p>} />
+            <Route path="cities" element={<p>List of Cities</p>} />
+            <Route path="countries" element={<p>Countries</p>} />
+            <Route path="form" element={<p>form</p>} />
+          </Route>
           <Route path="*" element={<PageNotFound />} />
-          <Route path="app" element={<AppLayout />} />
         </Routes>
       </BrowserRouter>
     </div>
