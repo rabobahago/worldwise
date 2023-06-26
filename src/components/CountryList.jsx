@@ -1,24 +1,34 @@
-import styles from "./CityList.module.css";
+import styles from "./CountryList.module.css";
 import Spinner from "./Spinner";
-import CityItem from "./CityItem";
+import CountryItem from "./CountryItem";
 import PropTypes from "prop-types";
 import Message from "./Message";
-export default function CityList({ cities, isLoading }) {
+export default function CountryList({ cities, isLoading }) {
   if (isLoading) return <Spinner />;
-  if (!cities.length)
+  if (cities.length === 0)
     return (
       <Message message="Add your first cities by clicking on the city in the map" />
     );
+  let countries = cities.reduce((arr, city) => {
+    if (!arr.map((el) => el.country).includes(city.country)) {
+      return [
+        ...arr,
+        { country: city.country, emoji: city.emoji, id: city.country },
+      ];
+    } else {
+      return arr;
+    }
+  }, []);
   return (
-    <ul className={styles.cityList}>
-      {cities.map((city) => (
-        <CityItem city={city} key={city.id} />
+    <ul className={styles.countryList}>
+      {countries.map((country) => (
+        <CountryItem country={country} key={country.id} />
       ))}
     </ul>
   );
 }
 
-CityList.propTypes = {
+CountryList.propTypes = {
   cities: PropTypes.arrayOf(
     PropTypes.shape({
       cityName: PropTypes.string.isRequired,

@@ -1,4 +1,5 @@
 import styles from "./CountryItem.module.css";
+import PropTypes from "prop-types";
 
 function CountryItem({ country }) {
   return (
@@ -10,3 +11,11 @@ function CountryItem({ country }) {
 }
 
 export default CountryItem;
+CountryItem.propTypes = {
+  country: PropTypes.arrayOf(
+    PropTypes.shape({
+      country: PropTypes.string.isRequired,
+      emoji: PropTypes.string.isRequired,
+    })
+  ),
+};
