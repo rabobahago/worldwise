@@ -3,7 +3,9 @@ import Spinner from "./Spinner";
 import CountryItem from "./CountryItem";
 import PropTypes from "prop-types";
 import Message from "./Message";
-export default function CountryList({ cities, isLoading }) {
+import { useCities } from "../contexts/CitiesContext";
+export default function CountryList() {
+  const { cities, isLoading } = useCities();
   if (isLoading) return <Spinner />;
   if (cities.length === 0)
     return (
@@ -22,7 +24,7 @@ export default function CountryList({ cities, isLoading }) {
   return (
     <ul className={styles.countryList}>
       {countries.map((country) => (
-        <CountryItem country={country} key={country.id} />
+        <CountryItem country={country} key={country.country} />
       ))}
     </ul>
   );
