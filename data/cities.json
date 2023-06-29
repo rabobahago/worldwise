@@ -1,6 +1,18 @@
 {
   "cities": [
     {
+      "cityName": "Abuja",
+      "country": "Nigeria",
+      "emoji": "🇳🇬",
+      "date": "2023-06-29T00:00:00.000Z",
+      "notes": "Beautiful country!",
+      "position": {
+        "lat": 9.05785,
+        "lng": 7.49508
+      },
+      "id": 12345678
+    },
+    {
       "cityName": "Lisbon",
       "country": "Portugal",
       "emoji": "🇵🇹",
