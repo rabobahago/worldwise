@@ -56,15 +56,16 @@ export default function Map() {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
         />
-        {cities.map((city) => (
-          <Marker position={[city.position.lat, city.position.lng]}>
-            <Popup>
-              <span>
-                {city.emoji} {city.cityName}
-              </span>
-            </Popup>
-          </Marker>
-        ))}
+        {cities &&
+          cities.map((city) => (
+            <Marker position={[city.position.lat, city.position.lng]}>
+              <Popup>
+                <span>
+                  {city.emoji} {city.cityName}
+                </span>
+              </Popup>
+            </Marker>
+          ))}
         <ChangeCenter position={mapPosition} />
         <DetectClick />
       </MapContainer>
