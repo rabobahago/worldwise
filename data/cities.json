@@ -35,18 +35,6 @@
         "lng": -3.7133789062500004
       },
       "id": 17806751
-    },
-    {
-      "cityName": "Moustiers-Sainte-Marie",
-      "country": "France",
-      "emoji": "🇫🇷",
-      "date": "2023-07-01T15:43:30.439Z",
-      "notes": "Take a quick tour",
-      "position": {
-        "lat": "43.81867485545323",
-        "lng": "6.262207031250001"
-      },
-      "id": 73930386
     }
   ]
 }
