@@ -9,17 +9,11 @@ import Form from "./components/Form";
 import SpinnerFullPage from "./components/SpinnerFullPage";
 import ProtectedRoute from "./pages/ProtectedRoute";
 const AppLayout = lazy(() => import("./pages/AppLayout"));
-const HomePage = lazy(() => import("./pages/HomePage"));
+const HomePage = lazy(() => import("./pages/Homepage"));
 const Pricing = lazy(() => import("./pages/Pricing"));
 const Product = lazy(() => import("./pages/Product"));
 const Login = lazy(() => import("./pages/Login"));
 const PageNotFound = lazy(() => import("./pages/PageNotFound"));
-
-// import Product from "./pages/Product";
-// import Pricing from "./pages/Pricing";
-// import HomePage from "./pages/HomePage";
-// import Login from "./pages/Login";
-// import PageNotFound from "./pages/PageNotFound";
 
 function App() {
   return (
